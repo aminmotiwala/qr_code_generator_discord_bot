@@ -1,5 +1,5 @@
 import discord
-import config
+import config #remove this config file
 from discord import app_commands
 import qrcode
 
@@ -45,4 +45,6 @@ async def generate_qr(interaction: discord.Interaction, user_input: str):
         picture = discord.File(f)
         await interaction.response.send_message("QR code for: "+user_input+" by Amin Motiwala", file=picture)
 
+#add your bot secret here
+# example client.run('my-secret-here')
 client.run(config.secret_token)
